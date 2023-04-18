@@ -1,0 +1,43 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: #ABB2B9;
+    width: 35%;
+}
+
+.divider-small{
+    background-color: #424949;
+    color: #FDFEFE;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+}
+
+.name{
+    font-weight: bold;
+    font-size: 3.5em;
+    color: #FDFEFE;
+    text-align: center;
+}
+
+.section{
+    color: #FDFEFE;
+    padding: 20px 0px 20px 10px;
+}
+
+.sub-section{
+    color: #FDFEFE;
+    margin: 10px;
+}
+
+.sub-section span, a{
+    font-weight: bold;
+    line-height: 20px;
+    padding-left: 10px;
+}
+
+.small-icon{
+    width: 20px;
+    height: 20px;
+    padding-left: 20px;
+}

@@ -1,0 +1,29 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+.body{
+    padding: 20px 0px 20px 60px;
+}
+
+.divider-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.divider-large{
+    background-color: #424949;
+    color: #FDFEFE;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    width: 100%;
+}
+
+.large-icon{
+    width: 40px;
+    height: 40px;
+    padding: 0px 10px 0px 10px;
+} 

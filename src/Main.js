@@ -1,25 +1,28 @@
-import React from "react";
+import { useEffect, useState } from 'react';
+import Client from "./Contentful.js";
 import "./Main.css";
 import Job from "./Job";
+import Education from "./Education.js";
 
-const contentful = require("contentful");
-let jobs = [];
-
-const client = contentful.createClient({
-  space: "7wl1lsnlulpd",
-  environment: "master",
-  accessToken: "SyS2l-LlW7vKLT0JiAee3Y3F93XEvZozghtF9U5Qhww",
-});
-
-client
-  .getEntries({
-    content_type: 'job'
-  })
-  .then((response) => jobs = response.items)
-  .catch(console.error);
-
+ 
 function Main() {
+  
+
+    const [jobHistory, setJobHistory] = useState();
+    const [education, setEducation] = useState();
+
     
+      useEffect(() => {
+        Client.getEntries({ content_type: "job"}).then((data) => setJobHistory(data));
+      }, []);
+  
+      useEffect(() => {
+        Client.getEntries({ content_type: "education"}).then((data) => setEducation(data));
+      }, []);
+  
+ 
+      const jobsList = jobHistory.items;
+      const educationList = education.items;
 
   return (
     <div className="main">
@@ -31,7 +34,7 @@ function Main() {
         />
         <div className="divider-large">PROFILE</div>
       </div>
-      <div className="body">About Me</div>
+      <div className="body">Mission Statement</div>
       <div className="divider-row">
         <img
           src={require("./img/strategy.png")}
@@ -41,11 +44,8 @@ function Main() {
         <div className="divider-large">CAREER</div>
       </div>
       <div className="body">
-      <div className="pokeList">
-            {jobs &&
-              jobs.map((job, index) => (
-            <Job key={index} props={job} />
-    ))}
+      <div>
+     { jobsList.map((item, index) => (<Job props={item} key={index} />))}
     </div>
       </div>
       <div className="divider-row">
@@ -56,7 +56,9 @@ function Main() {
         />
         <div className="divider-large">EDUCATION</div>
       </div>
-      <div className="body">Program Details</div>
+      <div className="body">
+      { educationList.map((item, index) => (<Education props={item} key={index} />))}
+      </div>
     </div>
   );
 }

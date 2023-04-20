@@ -1,7 +1,26 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
+import Client from "./Contentful.js";
 import './Sidebar.css';
+import Skill from "./Skill";
+import Language from "./Language.js";
+
 
 function SideBar() {
+
+    const [skills, setSkills] = useState();
+    const [languages, setLanguages] = useState();
+
+      useEffect(() => {
+        Client.getEntries({ content_type: "skill"}).then((data) => setSkills(data));
+      }, []);
+
+      useEffect(() => {
+        Client.getEntries({ content_type: "language"}).then((data) => setLanguages(data));
+      }, []);
+
+      const skillsList = skills.items;
+      const languagesList = languages.items;
+      
     return (
       <div className='sidebar'>
         <div className='name'>JUSTIN KYLE PHILLIPS</div>
@@ -29,9 +48,13 @@ function SideBar() {
           </div>
         </div>
         <div className='divider-small'>SKILLS</div>
-        <div className='section'>People Management</div> 
+        <div className='section'>
+        { skillsList.map((item, index) => (<Skill props={item} key={index} />))}
+    </div> 
         <div className='divider-small'>LANGUAGES</div>
-        <div className='section'>English, German, Spanish</div>
+        <div className='section'>
+        { languagesList.map((item, index) => (<Language props={item} key={index} />))}
+        </div>
         <div className='divider-small'>REFERENCES</div>
         <div className='section'>Available upon request</div>
       </div>

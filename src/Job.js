@@ -1,4 +1,3 @@
-import React from "react";
 import "./Job.css";
 
 function Job(props) {

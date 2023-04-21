@@ -6,8 +6,8 @@ function App() {
 
   return (
     <div className='resume'>
-      <SideBar />
-      <Main />
+      <SideBar></SideBar>
+      <Main></Main>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import "./Education.css";
+import "./Main.css";
 
 function Education(props) {
 

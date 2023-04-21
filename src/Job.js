@@ -1,4 +1,4 @@
-import "./Job.css";
+import "./Main.css";
 
 function Job(props) {
 

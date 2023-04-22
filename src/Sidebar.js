@@ -4,7 +4,6 @@ import './Sidebar.css';
 import Skill from "./Skill";
 import Language from "./Language.js";
 
-
 function SideBar() {
 
     const [skills, setSkills] = useState();
@@ -67,15 +66,17 @@ function SideBar() {
         </div>
       </div>
       <div className="divider-small">SKILLS</div>
-      <div className="section">
-      {skills && skills.items.map((item, index) => (<Skill props={item} key={index} />))}
+      <div className="skill-section">
+      {skills && skills.items.sort((a, b) => (b.fields.skillLevel - a.fields.skillLevel)).map((item, index) => (<Skill props={item} key={index} />))}
       </div>
       <div className="divider-small">LANGUAGES</div>
-      <div className="section">
-      {languages && languages.items.map((item, index) => (<Language props={item} key={index} />))}
-      </div>
+      <table>
+      <tbody>
+      {languages && languages.items.sort((a, b) => (b.fields.languageName - a.fields.languageName)).map((item, index) => (<Language props={item} key={index} />))}
+      </tbody>
+      </table>
       <div className="divider-small">REFERENCES</div>
-      <div className="section">Available upon request</div>
+      <div className="references-section">Available upon request</div>
     </div>
   );
 }

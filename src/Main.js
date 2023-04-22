@@ -46,7 +46,7 @@ function Main() {
       </div>
       <div className="body">
         <div>
-      {jobHistory && jobHistory.items.sort((a, b) => a.fields.startDate > b.fields.startDate).map((item, index) => (<Job props={item} key={index} />))}
+      {jobHistory && jobHistory.items.sort((a, b) => (a.fields.sortOrder - b.fields.sortOrder)).map((item, index) => (<Job props={item} key={index} />))}
         </div>
       </div> 
       <div className="divider-row">

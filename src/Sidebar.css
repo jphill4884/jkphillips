@@ -14,8 +14,8 @@
 }
 
 .name{
-    font-weight: bold;
-    font-size: 3.5rem;
+    font-weight: bolder;
+    font-size: 4.5rem;
     color: #FDFEFE;
     text-align: center;
 }
@@ -41,6 +41,54 @@
     height: 20px;
     padding-left: 20px;
 }
+
+td{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FDFEFE;
+    padding: 15px 5px 15px 5px;    
+}
+
+.col-one{
+    width: 30%;
+}
+
+.references-section{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    color: #FDFEFE;
+    padding: 20px 0px 20px 10px;
+}
+
+.skill-section{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FDFEFE;
+    padding: 20px 0px 20px 10px;
+}
+
+.skill-name{
+    padding-bottom: 5px;
+}
+
+.skill-bar{
+    line-height: 15.2px;
+    padding-bottom: 15px;
+    min-width: 20%;
+}
+
+.skill-rank{
+    background-color: #424949;
+    color: #424949;
+    margin-right: 15px;
+    min-width: 90%;
+}
+
+.scale{
+    display: flex;
+    flex-direction: row;
+    }
 
 @media screen and (max-width: 430px) {
     .sidebar{

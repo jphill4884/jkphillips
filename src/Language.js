@@ -1,14 +1,14 @@
 import React from "react";
-import "./Language.css";
+import "./Sidebar.css";
 
 function Language(props) {
-
   
 return (
-    <div className="skill">
-      <div>{props.props.fields.languageName}</div>
-      <div className="level">{props.props.fields.languageLevel}</div>
-    </div>
+    <tr>
+      <td className="col-one">{props.props.fields.languageName}</td>
+      <td>|</td>
+      <td>{props.props.fields.languageLevel}</td>
+    </tr>
   );
 }
 

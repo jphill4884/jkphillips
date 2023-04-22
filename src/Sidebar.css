@@ -95,3 +95,16 @@ td{
     min-width: 100%;
     }
   }
+
+  @media screen and (max-width: 1024px) {
+    .name{
+        font-weight: bolder;
+        font-size: 3.8rem;
+        color: #FDFEFE;
+        text-align: center;
+    }
+
+    .sub-section{
+        font-size: .7rem;
+    }
+  }

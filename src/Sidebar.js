@@ -23,7 +23,6 @@ function SideBar() {
       <div className="name">JUSTIN KYLE PHILLIPS</div>
       <div className="divider-small">Full-Stack Developer</div>
       <div className="section">
-        Contact Details
         <div className="sub-section">
           <img
             className="small-icon"
@@ -54,7 +53,7 @@ function SideBar() {
             src={require("./img/github.png")}
             alt="oktocat"
           />
-          <a href="github.com/jphill4884">github.com/jphill4884</a>
+          <a href="https://www.github.com/jphill4884" target="_blank" rel="noreferrer">github.com/jphill4884</a>
         </div>
         <div className="sub-section">
           <img
@@ -62,7 +61,7 @@ function SideBar() {
             src={require("./img/linkedin.png")}
             alt="linkedin logo"
           />
-          <a href="linkedin.com/in/jkylephillips">
+          <a href="https://www.linkedin.com/in/jkylephillips" target="_blank" rel="noreferrer">
             linkedin.com/in/jkylephillips
           </a>
         </div>

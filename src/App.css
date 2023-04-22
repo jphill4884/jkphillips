@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: row;
   max-width: 1200px;
-  min-width: 800px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -10,6 +9,8 @@
 
 @media screen and (max-width: 430px) {
   .resume{
+    flex: 0 0 auto;
     flex-direction: column;
+    margin-top: 0px;
   }
 }

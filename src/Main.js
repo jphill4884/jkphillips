@@ -58,7 +58,7 @@ function Main() {
         <div className="divider-large">EDUCATION</div>
       </div>
       <div className="body">
-      {education && education.items.map((item, index) => (<Education props={item} key={index} />))}
+      {education && education.items.sort((a, b) => (a.fields.sortOrder - b.fields.sortOrder)).map((item, index) => (<Education props={item} key={index} />))}
       </div>
     </div>
   );

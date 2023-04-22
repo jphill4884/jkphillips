@@ -28,7 +28,7 @@ function SideBar() {
             src={require("./img/marker.png")}
             alt="map pin"
           />
-          <span>390 7th St, San Diego CA 91932</span>
+          <span>390 7th St, Imperial Beach CA 91932</span>
         </div>
         <div className="sub-section">
           <img

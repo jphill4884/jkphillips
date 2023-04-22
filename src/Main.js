@@ -22,8 +22,7 @@ function Main() {
       useEffect(() => {
         client.getEntries({ content_type: "mission"}).then((missionData) => setMission(missionData));
       }, []);
-    
- console.log(mission)
+
   return (
     <div className="main">
       <div className="divider-row">
@@ -47,9 +46,9 @@ function Main() {
       </div>
       <div className="body">
         <div>
-      {jobHistory && jobHistory.items.map((item, index) => (<Job props={item} key={index} />))}
+      {jobHistory && jobHistory.items.sort((a, b) => a.fields.startDate > b.fields.startDate).map((item, index) => (<Job props={item} key={index} />))}
         </div>
-      </div>
+      </div> 
       <div className="divider-row">
         <img
           src={require("./img/graduation.png")}

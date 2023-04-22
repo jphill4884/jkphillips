@@ -26,7 +26,12 @@
     width: 40px;
     height: 40px;
     padding: 0px 10px 0px 10px;
+    opacity: .7;
 } 
+
+ul {
+    list-style-type: square;
+  }
 
 @media screen and (max-width: 430px) {
     .main{
@@ -34,10 +39,22 @@
         flex-direction: column;
         margin-left: auto;
         margin-right: auto;
+        width: 100%; 
+    }
+
+    .body{
+        padding: 10px;
     }
 
     .mission{
         margin-right: auto;
         margin-left: auto;
     }
+
+    .large-icon {
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+        padding: 0px;
+    } 
   }

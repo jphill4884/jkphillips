@@ -20,7 +20,7 @@ function SideBar() {
   return (
     <div className="sidebar">
       <div className="name">JUSTIN KYLE PHILLIPS</div>
-      <div className="divider-small">Full-Stack Developer</div>
+      <div className="divider-small">Full-stack Developer</div>
       <div className="section">
         <div className="sub-section">
           <img

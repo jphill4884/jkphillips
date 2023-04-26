@@ -28,7 +28,7 @@ function SideBar() {
             src={require("./img/marker.png")}
             alt="map pin"
           />
-          <span>390 7th St, Imperial Beach, CA 91932</span>
+          <span>390 7th St, Imperial Beach, CA</span>
         </div>
         <div className="sub-section">
           <img
@@ -67,7 +67,7 @@ function SideBar() {
       </div>
       <div className="divider-small">SKILLS</div>
       <div className="skill-section">
-      {skills && skills.items.sort((a, b) => (b.fields.skillLevel - a.fields.skillLevel)).map((item, index) => (<Skill props={item} key={index} />))}
+      {skills && skills.items.map((item, index) => (<Skill props={item} key={index} />))}
       </div>
       <div className="divider-small">LANGUAGES</div>
       <table>
